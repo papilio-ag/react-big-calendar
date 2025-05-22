@@ -22,14 +22,10 @@ jobs:
           scope: '@papilio-ag'
       
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm ci
       
       - name: Build package
         run: yarn build
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Publish package
         run: npm publish
