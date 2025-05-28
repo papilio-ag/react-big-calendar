@@ -336,6 +336,7 @@ class EventContainerWrapper extends React.Component {
 
           {event && (
             <TimeGridEvent
+              key="drag-preview"
               event={event}
               label={label}
               className="rbc-addons-dnd-drag-preview"
