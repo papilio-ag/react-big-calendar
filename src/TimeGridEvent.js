@@ -1,5 +1,4 @@
 import clsx from 'clsx'
-import React from 'react'
 
 function stringifyPercent(v) {
   return typeof v === 'string' ? v : v + '%'
@@ -32,10 +31,10 @@ function TimeGridEvent(props) {
   let userProps = getters.eventProp(event, start, end, selected)
 
   const inner = [
-    <div key="1" className="rbc-event-label">
+    <div key={`label-${eventId}`} className="rbc-event-label">
       {label}
     </div>,
-    <div key="2" className="rbc-event-content">
+    <div key={`content-${eventId}`} className="rbc-event-content">
       {Event ? <Event event={event} title={title} /> : title}
     </div>,
   ]
