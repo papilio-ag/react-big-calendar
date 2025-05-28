@@ -1,6 +1,6 @@
 {
   "name": "@papilio-ag/react-big-calendar",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Calendar! with events",
   "author": {
     "name": "Jason Quense",
@@ -23,7 +23,9 @@
       "import": "./dist/react-big-calendar.esm.js",
       "require": "./lib/index.js"
     },
-    "./lib/css/react-big-calendar.css": "./lib/css/react-big-calendar.css"
+    "./lib/css/react-big-calendar.css": "./lib/css/react-big-calendar.css",
+    "./lib/addons/dragAndDrop": "./lib/addons/dragAndDrop/index.js",
+    "./lib/addons/dragAndDrop/styles.css": "./lib/addons/dragAndDrop/styles.css"
   },
   "files": [
     "lib/",
