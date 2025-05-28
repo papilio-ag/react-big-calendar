@@ -110,24 +110,6 @@ class EventContainerWrapper extends React.Component {
     this.update(event, newRange)
   }
 
-  // _cleanupPreviewElements = () => {
-  //   if (this.ref.current) {
-  //     const previewElements = qsa(
-  //       this.ref.current,
-  //       '.rbc-addons-dnd-drag-preview'
-  //     )
-  //     previewElements.forEach((el) => {
-  //       if (el.parentNode) {
-  //         try {
-  //           el.parentNode.removeChild(el)
-  //         } catch (err) {
-  //           // Ignore removal errors
-  //         }
-  //       }
-  //     })
-  //   }
-  // }
-
   handleDropFromOutside = (point, boundaryBox) => {
     const { slotMetrics, resource } = this.props
 
@@ -145,9 +127,7 @@ class EventContainerWrapper extends React.Component {
       resource,
     })
 
-    // this.reset()
-    // Only call cleanup here, after dropping from outside
-    // this._cleanupPreviewElements()
+    this.reset()
   }
 
   handleDragOverFromOutside = (point, bounds) => {
