@@ -30,6 +30,8 @@ function TimeGridEvent(props) {
 
   let userProps = getters.eventProp(event, start, end, selected)
 
+  // Generate stable, unique keys for React reconciliation
+  const eventId = accessors.id ? accessors.id(event) : (event.id || event.key || 'unknown')
   const inner = [
     <div key={`label-${eventId}`} className="rbc-event-label">
       {label}
